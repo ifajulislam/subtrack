@@ -31,7 +31,7 @@ subscriptionRouter.put("/:id/cancel", (req, res) =>
 );
 
 subscriptionRouter.get("/upcoming-renewals", (req, res) =>
-  res.send({ message: "DELETE Subscription" })
+  res.send({ message: "GET Upcoming Subscription" })
 );
 
 export default subscriptionRouter;
