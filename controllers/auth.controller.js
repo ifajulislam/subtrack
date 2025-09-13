@@ -9,7 +9,7 @@ export const signUp = async (req, res, next) => {
 
   // Insight: Basically backend operations should be atomic. Either all or nothing. Insert works completely or it doesn't, Update works completely or it doesn't.
 
-  session.startSession(); // Starting the mongoose transaction
+  session.startTransaction(); // Starting the mongoose transaction
 
   try {
     const { name, email, password } = req.body;
