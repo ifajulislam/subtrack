@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 import { JWT_SECRET, JWT_EXPIRES_IN } from "../config/env.js";
 
 export const signUp = async (req, res, next) => {
-  const session = mongoose.startSession(); // Session of a mongoose transaction
+  const session = await mongoose.startSession(); // Session of a mongoose transaction
 
   // Insight: Basically backend operations should be atomic. Either all or nothing. Insert works completely or it doesn't, Update works completely or it doesn't.
 
